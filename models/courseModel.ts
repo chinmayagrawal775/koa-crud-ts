@@ -1,12 +1,18 @@
 import mongoose from "mongoose";
-// const mongoose = require('mongoose');
 
-const courseSchema = new mongoose.Schema({
+// from the offical doc
+interface Course {
+    id: number,
+    title: string,
+    duration:string
+}
+
+const courseSchema = new mongoose.Schema<Course>({
     id: {type: Number},
     title: {type: String},
     duration: {type: String}
 })
 
-const courseModel = mongoose.model('course', courseSchema);
+const courseModel = mongoose.model<Course>('course', courseSchema);
 
 export default courseModel;

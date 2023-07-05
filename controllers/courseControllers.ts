@@ -1,6 +1,12 @@
 import * as koa from 'koa';
 import courseModel from "../models/courseModel.ts";
 
+type Course = {
+    id: number,
+    title: string,
+    duration: string
+}
+
 // Controllers
 const indexController = async (ctx: koa.Context) => {
     ctx.response.status = 200
@@ -8,7 +14,7 @@ const indexController = async (ctx: koa.Context) => {
 }
 
 const addCourseController = async (ctx: koa.Context) => {
-    const body:any = ctx.request.body;
+    const body:Course = <Course>ctx.request.body;
     const newCourse = new courseModel({
         id: body.id,
         title: body.title,
@@ -32,7 +38,7 @@ const viewSpecificCourseController = async (ctx: koa.Context) => {
 }
 
 const updateCourseController = async (ctx: koa.Context) => {
-    const body:any = ctx.request.body;
+    const body:Course = <Course>ctx.request.body;
     await courseModel.updateOne({id: ctx.params.id}, {id: body.id, title: body.title, duration: body.duration})
     ctx.response.status = 200
     ctx.body = {"msg": "Course Updated Successfully"};
