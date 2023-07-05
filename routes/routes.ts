@@ -8,14 +8,6 @@ import {
     viewSpecificCourseController
 } from '../controllers/courseControllers.ts';
 
-// const koaRouter = require('koa-router');
-// const {addCourseController} = require('../controllers/courseControllers.ts');
-// const {deleteCourseController} = require('../controllers/courseControllers.ts');
-// const {indexController} = require('../controllers/courseControllers.ts');
-// const {updateCourseController} = require('../controllers/courseControllers.ts');
-// const {viewAllCoursesController} = require('../controllers/courseControllers.ts');
-// const {viewSpecificCourseController} = require('../controllers/courseControllers.ts');
-
 const router = new koaRouter()
 
 // routes

@@ -3,11 +3,6 @@ import router from './routes/routes.ts';
 import * as bodyparser from 'koa-bodyparser';
 import connectDb from './db/dbConnection.ts';
 
-// const koa = require('koa');
-// const {router} = require('./routes/routes.ts');
-// const bodyparser = require('koa-bodyparser');
-// const {connectDb} = require('./db/dbconnection.ts');
-
 // app initilization
 const app = new koa();
 

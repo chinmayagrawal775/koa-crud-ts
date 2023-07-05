@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-// const mongoose = require('mongoose');
 
 const OPTIONS = {
     dbName: 'coursedb'
