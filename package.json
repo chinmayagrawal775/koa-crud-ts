@@ -2,9 +2,10 @@
   "name": "koa_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.ts",
+    "test": "mocha -r ts-node/register '**/**/*.test.ts'"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +20,15 @@
     "typescript": "^5.1.6"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.5",
     "@types/koa": "^2.13.6",
     "@types/koa-bodyparser": "^4.3.10",
-    "@types/koa-router": "^7.4.4"
+    "@types/koa-router": "^7.4.4",
+    "@types/mocha": "^10.0.1",
+    "@types/supertest": "^2.0.12",
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
   }
 }
