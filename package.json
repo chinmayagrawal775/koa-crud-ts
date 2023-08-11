@@ -2,9 +2,9 @@
   "name": "koa_server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +15,8 @@
     "koa-router": "^12.0.0",
     "mongoose": "^7.3.1",
     "nodemon": "^2.0.22",
+    "swagger-autogen": "^2.23.5",
+    "swagger-ui-express": "^5.0.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },

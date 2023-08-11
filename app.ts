@@ -2,6 +2,7 @@ import * as koa from 'koa';
 import router from './routes/routes.ts';
 import * as bodyparser from 'koa-bodyparser';
 import connectDb from './db/dbConnection.ts';
+import * as si from './swagger.js'
 
 // app initilization
 const app = new koa();
@@ -19,6 +20,9 @@ connectDb('mongodb://localhost:27017');
 app.use((ctx: koa.Context) => {
   ctx.body = {"msg": "Working"};
 });
+
+// Swagger Integration
+app.use(si(app));
 
 // Server running app
 app.listen(3000, () => {
